@@ -12,12 +12,12 @@ khi một web browser muốn bảo mật phiên kết nối tới một web serv
 
 <img src=http://i.imgur.com/dvTssKl.png width="60%" height="60%" border="1">
 
--Bước 1: Client gửi yêu cầu kết nối tới SSL Server.
--Bước 2: SSL Server gửi lại Certificate cho Client.
--Bước 3: Client sẽ kiểm tra Certificate với Certificate Authority(CA), là một tổ chức có trách nhiệm xác thực cho SSL Server.
--Bước 4: Nếu xác thực thành công, Client sẽ gửi Certificate cho SSL Server.
--Bước 5: SSL Server sẽ check Certificate với CA.
--Bước 6: Nếu xác thực thành công, toàn bộ thông tin truyền tải giữa 2 máy sẽ được mã hóa bằng cặp khóa public và private của SSL Server.
+- Bước 1: Client gửi yêu cầu kết nối tới SSL Server.
+- Bước 2: SSL Server gửi lại Certificate cho Client.
+- Bước 3: Client sẽ kiểm tra Certificate với Certificate Authority(CA), là một tổ chức có trách nhiệm xác thực cho SSL Server.
+- Bước 4: Nếu xác thực thành công, Client sẽ gửi Certificate cho SSL Server.
+- Bước 5: SSL Server sẽ check Certificate với CA.
+- Bước 6: Nếu xác thực thành công, toàn bộ thông tin truyền tải giữa 2 máy sẽ được mã hóa bằng cặp khóa public và private của SSL Server.
 
 # 3. Cấu hình SSL Certificate
 Mô hình triển khai
@@ -29,6 +29,7 @@ Mô hình triển khai
 # 3.1 Khởi tạo Certificate Authorize Server
 '''sh
 [root@ca]#apt-get install openssl
+
   
 ```
 
