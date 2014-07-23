@@ -27,9 +27,9 @@ Mô hình triển khai
 <img src=http://i.imgur.com/0Urd8x1.png width="60%" height="60%" border="1">
 
 # 3.1 Khởi tạo Certificate Authorize Server
-'''sh
-[root@ca]#apt-get install openssl
+
+    [root@ca]#apt-get install openssl
 
   
-```
+
 
