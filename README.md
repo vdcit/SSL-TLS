@@ -133,7 +133,7 @@ Xóa file cấu hình mặc định
 Tạo file cấu hình apache
 
 	[root@web]#cd /etc/apache2/sites-available/
-	[root@web]#wget 
+	[root@web]#wget https://raw.githubusercontent.com/longsube/SSL-TLS/master/VDC-IT
 	
 Tạo trang web thử nghiệm
 
@@ -148,7 +148,11 @@ Chạy máy chủ web
 ## 3.4. Thử nghiệm
 Trên máy client copy file ca.crt trên CA về
 
+<img src=http://i.imgur.com/Ul9Xlif.png width="60%" height="60%" border="1">
+
 Import file ca.crt vào trình duyệt
+
+<img src=http://i.imgur.com/3Lx9ssM.png width="60%" height="60%" border="1">
 
 Truy cập tới https://VDC-IT
 
