@@ -113,22 +113,44 @@ Gửi lại chứng chỉ cho máy chủ Web
 	[root@ca]#scp /etc/pki/myCA/certs/server.crt root@web:/etc/pki/myCA
 	
 ## 3.3. Cấu hình Web Server sử dụng Certificate
-Copy  certificate  và key tới vị trí để Apache có thể nhận biết
+Cài đặt apache
+	
+	[root@web]#apt-get install apache2 -y
+	
+Kích hoạt module ssl
 
-	[root@web]#mv /etc/httpd/conf/ssl.crt/server.crt /etc/httpd/conf/ssl.crt/server1.crt
-	[root@web]#cp /etc/pki/myCA/server.crt  /etc/httpd/conf/ssl.crt/
-	[root@web]#mv /etc/httpd/conf/ssl.key/server.key /etc/httpd/conf/ssl.key/server1.key
-	[root@web]#cp /etc/pki/myCA/private/server.key /etc/httpd/conf/ssl.key/server.key
+	[root@web]#a2enmod ssl
+	
+Tạo thư mục chứa Server Key và Server Certificate
+
+	[root@web]#mkdir /etc/apache2/ssl
+	[root@web]#cp /etc/pki/myCA/private/server.key /etc/pki/myCA/server.crt /etc/apache2/ssl
+	
+Xóa file cấu hình mặc định
+
+	[root@web]#rm /etc/apache2/sites-enabled/default-ssl
+	
+Tạo file cấu hình apache
+
+	[root@web]#cd /etc/apache2/sites-available/
+	[root@web]#wget 
 	
 Tạo trang web thử nghiệm
 
-	[root@web]#cd /var/www/html/
-	[root@web]#vi index.html
+	[root@web]#cd /var/www/
+	[root@web]#wget https://raw.githubusercontent.com/longsube/SSL-TLS/master/index.html
 	
 Chạy máy chủ web
 
 	[root@web]#chkconfig httpd on
 	[root@web]#service httpd start
+	
+## 3.4. Thử nghiệm
+Trên máy client copy file ca.crt trên CA về
+
+Import file ca.crt vào trình duyệt
+
+Truy cập tới https://VDC-IT
 
 
 
