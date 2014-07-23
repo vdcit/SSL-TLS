@@ -33,22 +33,22 @@ Cài đặt OpenSSL
 	
 Tạo thư mục thử nghiệm
 
-	[root@ca]# mkdir -m 0755 /etc/pki
-	[root@ca]# mkdir -m 0755 /etc/pki/myCA /etc/pki/myCA/private  /etc/pki/myCA/certs /etc/pki/myCA/newcerts  /etc/pki/myCA/crl
+	[root@ca]#mkdir -m 0755 /etc/pki
+	[root@ca]#mkdir -m 0755 /etc/pki/myCA /etc/pki/myCA/private  /etc/pki/myCA/certs /etc/pki/myCA/newcerts  /etc/pki/myCA/crl
 	
 Tạo file cấu hình
 
 	[root@ca]#cd /etc/pki/myCA
-	[root@ca]#wget https://github.com/longsube/SSL-TLS/blob/master/testssl.conf
+	[root@ca]#wget https://raw.githubusercontent.com/longsube/SSL-TLS/master/testssl.conf
 	
 Tạo Certificate cho bản thân mình
 
-	[root@ca]# cd /etc/pki/myCA
-	[root@ca]# openssl req -new -x509 -keyout private/ca.key -out certs/ca.crt -days 1825
+	[root@ca]#cd /etc/pki/myCA
+	[root@ca]#openssl req -new -x509 -keyout private/ca.key -out certs/ca.crt -days 1825
 	
 Phân quyền để bảo mật khóa private
 
-	[root@ca]# chmod 0400 /etc/pki/myCA/private/ca.key
+	[root@ca]#chmod 0400 /etc/pki/myCA/private/ca.key
 	
 ## 3.2.Khởi tạo Certificate Request từ Web Server
 Cài đặt OpenSSL
@@ -57,7 +57,7 @@ Cài đặt OpenSSL
 	
 Tạo thư mục thử nghiệm
 
-	[root@web]# mkdir -m 0755 /etc/pki
+	[root@web]#mkdir -m 0755 /etc/pki
 
 Tạo thư mục để lưu CA
 	
