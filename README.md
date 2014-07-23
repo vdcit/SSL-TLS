@@ -27,8 +27,11 @@ Mô hình triển khai
 <img src=http://i.imgur.com/0Urd8x1.png width="60%" height="60%" border="1">
 
 # 3.1 Khởi tạo Certificate Authorize Server
-
+Cài đặt OpenSSL
     [root@ca]#apt-get install openssl
+Tạo thư mục thử nghiệm
+	[root@ca]# mkdir -m 0755 /etc/pki
+	[root@ca]# mkdir -m 0755 /etc/pki/myCA /etc/pki/myCA/private  /etc/pki/myCA/certs /etc/pki/myCA/newcerts  /etc/pki/myCA/crl
 
   
 
