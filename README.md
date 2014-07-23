@@ -28,10 +28,21 @@ Mô hình triển khai
 
 # 3.1 Khởi tạo Certificate Authorize Server
 Cài đặt OpenSSL
+
     [root@ca]#apt-get install openssl
+	
 Tạo thư mục thử nghiệm
+
 	[root@ca]# mkdir -m 0755 /etc/pki
 	[root@ca]# mkdir -m 0755 /etc/pki/myCA /etc/pki/myCA/private  /etc/pki/myCA/certs /etc/pki/myCA/newcerts  /etc/pki/myCA/crl
+	
+Tạo file cấu hình
+
+	[root@ca]#cd /etc/pki/myCA
+	[root@ca]#wget https://github.com/longsube/SSL-TLS/blob/master/testssl.conf
+
+	
+
 
   
 
