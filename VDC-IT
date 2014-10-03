@@ -1,11 +1,14 @@
-<VirtualHost _default_:443>
-        ServerAdmin webmaster@localhost
+<IfModule mod_ssl.c>
+
+        <VirtualHost _default_:443>
+                ServerAdmin webmaster@localhost
  
-        DocumentRoot /var/www
+                DocumentRoot /var/www
  
-        SSLEngine on
+                SSLEngine on
  
-        SSLCertificateFile    /etc/apache2/ssl/server.crt
-        SSLCertificateKeyFile /etc/apache2/ssl/server.key
+                SSLCertificateFile    /etc/apache2/ssl/server.crt
+                SSLCertificateKeyFile /etc/apache2/ssl/server.key
  
-</VirtualHost>
+        </VirtualHost>i
+</IfModule>
