@@ -142,8 +142,8 @@ Tạo trang web thử nghiệm
 	
 Chạy máy chủ web
 
-	[root@web]#chkconfig httpd on
-	[root@web]#service httpd start
+	[root@web]#chkconfig apache2 on
+	[root@web]#service apache2 start
 	
 ## 3.4. Thử nghiệm
 Trên máy client copy file ca.crt trên CA về
